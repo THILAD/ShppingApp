@@ -1,0 +1,7 @@
+{
+  "name": "SuperShopApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
