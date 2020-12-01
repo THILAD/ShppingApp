@@ -1,15 +1,15 @@
 
-@font-face 
-{
-font-family:boonhom;
-src: url(../../assets/boonhom/otf/boonhome-700.otf);
 
-}
 ion-header{
     --background: var(--red-b) !important;
     ion-title{
         font-size: 30px;
     }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
 }
 .logo{
     margin-top: 10px;
@@ -44,12 +44,7 @@ ion-header{
             margin: auto; 
         } 
     }
-    .buton{
-        .btn_register{
-        
-            
-        }
-    }
+  
 }
 
 // .profile_card{

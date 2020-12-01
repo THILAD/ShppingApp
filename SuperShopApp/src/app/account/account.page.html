@@ -114,11 +114,13 @@
 
 
 
- <ion-header class="ion-no-border">
-  <ion-toolbar>
+ <ion-header class="ion-no-border"> 
+   
+  <ion-toolbar class="header">
     <div _ngcontent-gor-c7="" class="logo">
      <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
     </div>
+  
   </ion-toolbar>
 </ion-header>
 
@@ -159,7 +161,7 @@
     </div>
     <div class="buton  ion-text-center">
       
-      <ion-button shape="round" >Login</ion-button>
+      <ion-button shape="round" (click)="showModalLogin()" >Login</ion-button>
       <ion-button class="btn_register" shape="round"  color="danger"  fill="outline">Sign Up</ion-button>
     </div>
   </div>
