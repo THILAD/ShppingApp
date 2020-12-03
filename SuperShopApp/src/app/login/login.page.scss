@@ -1,93 +1,61 @@
-
-*{
-    font-family:boonhom;
-
+* {
+    font-family: boonhom;
 }
 
-.logo{
+.logo {
     margin-top: 10px;
     margin-left: 20px;
-    img{
-        
+    img {
         width: 50px;
-
-    } 
+    }
 }
-.container{
-    .logo_laoapp img{
+
+.container {
+    .logo_laoapp img {
         margin-top: 50px;
         width: 100px;
         height: 100px;
     }
-    h4{
-        color: #f8a30e; 
-        
-    }
-
-    .from_login{
-        margin-top: 80px;
-        width: 100%;
+    .name_app {
         display: flex;
         justify-content: center;
-        .from{
-    width: 80%;
-    ion-label{
-        font-family:boonhom;
-        color: #f8a30e; 
-
-    }
-    ion-item {
-        margin-top: 10px;
-        ion-input{
-          border: red 1 solid 1px;
+        h4 {
+            font-family: boonhom;
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            color: #f8a30e;
+        }
+        h4:before,
+        h4:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 2px solid #f8a30e;
+            margin: auto;
         }
     }
-        }
-    }
 }
 
-.input_icon{
-
-    width: 100%;
-    // background-color: rebeccapurple;
-    display: flex;
-   ion-icon{
-       color: #a31d4f;
-   }
-   
-}
-
-.from_login{
-    width: 100%;
-    .boxshadow{
-width: 80%;
-height: 60px;
-border-radius: 20px;
-box-sizing: none;
-border: red 1px solid;
-    }
-
-}
-.container_from{
+.container_from {
     position: relative;
     top: 30px;
 }
 
-ion-list{
-
-    ion-item{
+ion-list {
+    ion-item {
         padding-top: 10px;
+        box-sizing: none;
+        margin-left: 12px;
     }
-
     margin-right: 20px;
-    h4{
+    h4 {
         font-size: 14px;
         color: #a31d4f;
     }
 }
-.btn_submit{
+
+.btn_submit {
     position: relative;
     top: 26px;
     margin: 13px;
 }
-

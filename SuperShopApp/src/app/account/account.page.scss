@@ -1,125 +1,146 @@
-
-
-ion-header{
+ion-header {
     --background: var(--red-b) !important;
-    ion-title{
+    ion-title {
         font-size: 30px;
     }
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
 }
-.logo{
+
+.logo {
     margin-top: 10px;
     margin-left: 20px;
-    img{
-        
+    img {
         width: 50px;
+    }
+}
 
-    } 
+.login_logo {
+    margin-top: 20px;
 }
-.container{
-.img_logo img{
-    width: 100px;
-}
-    .name_app{
+
+.container {
+    .img_logo img {
+        width: 100px;
+    }
+    .name_app {
         display: flex;
         justify-content: center;
-        h4 { 
-            font-family:boonhom;
-
+        h4 {
+            font-family: boonhom;
             width: 300px;
-            display: flex; 
-            flex-direction: row; 
-            color: #f8a30e; 
-        } 
-        
-        h4:before, 
-        h4:after { 
-            content: ""; 
-            flex: 1 1; 
-            border-bottom: 2px solid #f8a30e; 
-            margin: auto; 
-        } 
+            display: flex;
+            flex-direction: row;
+            color: #f8a30e;
+        }
+        h4:before,
+        h4:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 2px solid #f8a30e;
+            margin: auto;
+        }
     }
-  
-}
-
-// .profile_card{
-//     width: 100%;
-//     height: 200px;
-//     background-color: gray;
-// }
-.photo{
-    .images_profile{
-        position: relative;
-        text-align: right;
-
-    img{
-    border-radius: 50%;
-
-        width: 100px;
-        height: 100px;
-    }
-}
-}
-
-
-// .box-item-menu{
-//     width: 140px;
-//     height: 110px;
-// }
-// .list-menu-item{
-//     margin-top: -35px;
-// }
-// .box-item-menu2{
-// }
-
-.box-list-menu{
-    // margin-top: -40px;
-    ion-icon{
-        font-size: 32px;
-    }
-    ion-card-content{
-        height: 100px !important;
-        text-align: center;
-        
-}
-}
-
-
-// .list-Menu{
-//     // margin-top: -100px;
-//     position: relativZe;
-//     top: -90px;
-// }
-
-
-.superPorfile{
-
-    // ion-col{
-    //     // margin-top: -40px;
-    // }
-
-    ion-item{
-        padding: 10px;
-        p{
-            margin-left: 10px;
-            font: auto;
+    .buton {
+        margin-top: 20px;
+        ion-button {
+            font-family: boonhom;
         }
     }
 }
 
-//Moto G4
-@media screen and (max-width: 360px) {
-    .photo{
-        .images_profile{
-            img{
-                width: 80px;
-                height: 80px;
+// menu_list
+.container_list_menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .menu {
+        max-width: 50%;
+        max-height: 50%;
+        padding: 4px;
+        ion-card {
+            ion-label {
+                font-family: boonhom;
+            }
+            width: 180px;
+            ion-icon {
+                font-size: 27px;
             }
         }
     }
-  }
+}
+
+// coputer screen
+@media screen and (max-width: 1024px) {
+    .menu-card {
+        max-width: 235px;
+        // color: rgb(82, 185, 78);
+    }
+}
+
+//ipad  pro
+@media screen and (max-width: 1024px) {
+    .menu-card {
+        max-width: 235px;
+        // color: rgb(82, 185, 78);
+    }
+}
+
+//ipad 
+@media screen and (max-width: 768px) {
+    .menu-card {
+        max-width: 230px;
+        // color: rgb(82, 185, 78);
+    }
+}
+
+// surface duo
+@media screen and (max-width: 540px) {
+    .menu-card {
+        max-width: 160px;
+        // color: rgb(82, 185, 78);
+    }
+}
+
+//iphone 6 7 8 plus
+@media screen and (max-width: 414px) {
+    .menu-card {
+        max-width: 180px;
+        // color: rgb(82, 185, 78);
+    }
+}
+
+//iphone 6 7 8 10
+@media screen and (max-width: 375px) {
+    .menu-card {
+        max-width: 160px;
+        // color: rgb(197, 27, 27);
+    }
+}
+
+//galaxy s5
+@media screen and (max-width: 360px) {
+    .menu-card {
+        max-width: 150px;
+        // color: rgb(101, 18, 168);
+    }
+}
+
+//iphone 5
+@media screen and (max-width: 320px) {
+    .menu-card {
+        max-width: 130px;
+        // color: rgb(177, 150, 150);
+    }
+}
+
+//gLxy fold
+@media screen and (max-width: 280px) {
+    .menu-card {
+        max-width: 116px;
+        // color: rgb(177, 150, 150);
+    }
+}

@@ -1,0 +1,97 @@
+.logo {
+    margin-top: 10px;
+    margin-left: 20px;
+    img {
+        width: 50px;
+    }
+}
+
+.container {
+    .logo_laoapp img {
+        margin-top: 50px;
+        width: 100px;
+        height: 100px;
+    }
+    .name_app {
+        display: flex;
+        justify-content: center;
+        h4 {
+            font-family: boonhom;
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            color: #f8a30e;
+        }
+        h4:before,
+        h4:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 2px solid #f8a30e;
+            margin: auto;
+        }
+    }
+}
+
+// .form_verification {
+//     background-color: rgb(59, 59, 78);
+//     width: 100%;
+//     height: 200px;
+//     ion-list {
+//         ion-item {
+//             ion-inpu {
+//                 width: 20px;
+//                 height: 334px;
+//             }
+//         }
+//     }
+// }
+.form {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 25px;
+    ion-list {
+        padding-bottom: 25px;
+        ion-item {
+            border: 0 !important;
+            width: 273px;
+            ion-input {
+                font-family: boonhom;
+                width: 30px;
+                border-bottom: 1px solid rgba(204, 204, 204, 0.6) !important;
+                margin: 0 16px;
+                color: var(--text-light2);
+                font-size: 1.95rem !important;
+                font-weight: 500 !important;
+                --padding-bottom: 5px !important;
+            }
+        }
+    }
+    h2 {
+        margin: 0;
+        color: var(--text-light);
+        font-size: .9rem;
+        span {
+            color: var(--primary);
+            font-size: .95rem;
+        }
+    }
+}
+
+.btn {
+    ion-button {
+        font-family: boonhom;
+    }
+    font-weight: 400;
+    font-size: .9rem;
+    color: blue;
+    margin-bottom: 40px;
+}
+
+.verification {
+    margin-top: -40px;
+    padding: 20px;
+    font-family: boonhom;
+    font-size: small;
+    color: #222428;
+}

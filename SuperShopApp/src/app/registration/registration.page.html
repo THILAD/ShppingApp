@@ -1,9 +1,59 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>registration</ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+    <ion-toolbar class="header">
+        <div _ngcontent-gor-c7="" class="logo">
+            <span>
+      <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png" />
+    </span>
+        </div>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+    <div class="container ">
+        <div class="logo_laoapp ion-text-center">
+            <img src="../../assets/imgs/logo.png" alt="">
+
+        </div>
+        <div class="name_app ion-text-center">
+            <h4 class="ion-text-center">&nbsp; &nbsp;ຕະຫຼາດຮັ່ງມີ &nbsp;</h4>
+        </div>
+    </div>
+
+
+    <div class="container_from">
+        <ion-list>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="person-sharp" color="medium"></ion-icon>
+                </ion-label>
+                <ion-input type="text" placeholder="ຊື່ສະມາຊິກ"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <ion-icon color="medium" name="call-sharp"></ion-icon>
+                </ion-label>
+                <ion-input type="text" placeholder="ເບີໂທລະສັບ"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="lock-closed-sharp" color="medium"></ion-icon>
+                </ion-label>
+                <ion-input type="text" placeholder="ລະຫັດຜ່ານ"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="lock-closed-sharp" color="medium"></ion-icon>
+                </ion-label>
+                <ion-input type="password" placeholder="ຍືນຍັນລະຫັດຜ່ານ"> </ion-input>
+
+            </ion-item>
+        </ion-list>
+
+        <div padding class="btn_submit">
+            <ion-button color="danger" expand="block" (click)="showModalVerification()">ສະມັກສະມາຊິກ</ion-button>
+        </div>
+    </div>
 
 </ion-content>

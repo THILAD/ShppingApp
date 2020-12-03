@@ -1,0 +1,64 @@
+    .logo {
+        margin-top: 10px;
+        margin-left: 20px;
+        img {
+            width: 50px;
+        }
+    }
+    
+    .container {
+        // display: flex;
+        // justify-content: center;
+        .logo_laoapp img {
+            width: 100px;
+        }
+        .name_app {
+            display: flex;
+            justify-content: center;
+            h4 {
+                font-family: boonhom;
+                width: 300px;
+                display: flex;
+                flex-direction: row;
+                color: #f8a30e;
+            }
+            h4:before,
+            h4:after {
+                content: "";
+                flex: 1 1;
+                border-bottom: 2px solid #f8a30e;
+                margin: auto;
+            }
+        }
+        .buton {
+            margin-top: 20px;
+            ion-button {
+                font-family: boonhom;
+            }
+        }
+    }
+    
+    .container_from {
+        position: relative;
+        top: 10px;
+    }
+    
+    ion-list {
+        ion-item {
+            padding-top: 10px;
+            box-sizing: none;
+            margin-left: 12px;
+            ion-input {
+                font-family: boonhom;
+            }
+        }
+    }
+    
+    .btn_submit {
+        position: relative;
+        top: 26px;
+        margin: 13px;
+        ion-button {
+            font-family: boonhom;
+        }
+    }

@@ -1,59 +1,44 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
-    <div _ngcontent-gor-c7="" class="logo">
-      <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
-    </div>
-    
-  </ion-toolbar>
+    <ion-toolbar>
+        <div _ngcontent-gor-c7="" class="logo">
+            <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
+        </div>
+
+    </ion-toolbar>
 </ion-header>
 
-<ion-content class="padding"  fullscreen>
-  <div class="container">
-    <div class="logo_laoapp ion-text-center">
-      <img src="../../assets/imgs/logo.png" alt="">
-      <h4>ຕະຫຼາດຮັ່ງມີ</h4>
-    </div>
-    <!-- <div class="from_login ion-text-center">
-      <div class="from">
-        <ion-item color="light" lines="none" >
-          <ion-label position="floating">ເບີໂທລະສັບ</ion-label>
-          <div class="input_icon">
-            <ion-input></ion-input>
-            <div class="input_icon">
-              <ion-input></ion-input>
-              <ion-icon name="call-sharp"></ion-icon>
-            </div>
-          </div>
-        </ion-item>
-        <ion-item   lines="none">
-          <ion-label position="floating">ລະຫັດຜ່ານ</ion-label>
-          <div class="input_icon">
-            <ion-input></ion-input>
-            <ion-icon class="icon" name="lock-closed-outline"></ion-icon>
-          </div>
-        </ion-item>
-      </div>
-    </div> -->
-   
-  </div>
-<div class="container_from">
-  <ion-list>  
-    <ion-item>  
-      <ion-label><ion-icon color="medium" name="call-sharp"></ion-icon></ion-label>  
-      <ion-input type="text" placeholder="ເບີໂທລະສັບ"></ion-input>  
-    </ion-item>  
-        
-    <ion-item>  
-      <ion-label><ion-icon color="medium"  name="lock-open-sharp"></ion-icon></ion-label>  
-      <ion-input  type="password" placeholder="ລະຫັດຜ່ານ" > </ion-input>  
-      <h4 slot="end">forgot</h4>
+<ion-content class="padding" fullscreen>
+    <div class="container">
+        <div class="logo_laoapp ion-text-center">
+            <img src="../../assets/imgs/logo.png" alt="">
 
-    </ion-item>   
-  </ion-list>  
-        
-  <div padding class="btn_submit">  
-    <ion-button color="danger" expand="block">Sign In</ion-button>  
-  </div>  
-</div>
-    
+        </div>
+        <div class="name_app">
+            <h4 class="ion-text-center">&nbsp; &nbsp;ຕະຫຼາດຮັ່ງມີ &nbsp;</h4>
+        </div>
+    </div>
+    <div class="container_from">
+        <ion-list>
+            <ion-item>
+                <ion-label>
+                    <ion-icon color="medium" name="call-sharp"></ion-icon>
+                </ion-label>
+                <ion-input type="text" placeholder="ເບີໂທລະສັບ"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <ion-icon color="medium" name="lock-open-sharp"></ion-icon>
+                </ion-label>
+                <ion-input type="password" placeholder="ລະຫັດຜ່ານ"> </ion-input>
+                <h4 slot="end">ລືມລະຫັດ</h4>
+
+            </ion-item>
+        </ion-list>
+
+        <div padding class="btn_submit">
+            <ion-button color="danger" expand="block">ເຂົ້າສູ່ລະບົບ</ion-button>
+        </div>
+    </div>
+
 </ion-content>

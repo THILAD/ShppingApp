@@ -21,7 +21,11 @@ const routes: Routes = [
   {
     path: 'verification',
     loadChildren: () => import('./verification/verification.module').then( m => m.VerificationPageModule)
+  },  {
+    path: 'product-info',
+    loadChildren: () => import('./product-info/product-info.module').then( m => m.ProductInfoPageModule)
   }
+
 ];
 @NgModule({
   imports: [

@@ -1,246 +1,102 @@
-<!-- <ion-header class="ion-no-border">
-  <ion-toolbar>
-    <div _ngcontent-gor-c7="" class="logo">
-     <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
-    </div>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+    <ion-toolbar class="header">
+        <div _ngcontent-gor-c7="" class="logo">
+            <span>
+        <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png" />
+      </span>
+        </div>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-  <ion-card class="profiles_account" style="height: 210px;">
-    <ion-card-header>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-grid >
-        <ion-row class="profile_card">
-          <ion-col size="6">
-            <ion-card-title>THILADDEV</ion-card-title>
-
-          </ion-col>
-          <ion-col size="6" class="photo">
-            <div class="images_profile">
-              <img src="https://i.ytimg.com/vi/Qt0GFuslOjk/maxresdefault.jpg" alt="">
+    <section class="login_logo">
+        <div class="container">
+            <div class="img_logo ion-text-center">
+                <img src="../../assets/imgs/logo.png" alt="" />
             </div>
-          </ion-col>
-          <ion-col>
-            <ion-label>
-              Please Login
-            </ion-label>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-
-    </ion-card-content>
-  </ion-card>
-  <ion-grid class="superPorfile">
-    <ion-row>
-      <ion-col class=" box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
-
-            <ion-icon name="wallet-sharp" color="primary"></ion-icon><br>
-            <ion-label>
-              wallet
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
-
-            <ion-icon name="reorder-four-sharp" color="primary"></ion-icon><br>
-            <ion-label>
-              My Order
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
-
-            <ion-icon name="location-outline" color="primary"></ion-icon><br>
-
-            <ion-label>
-              Adrress
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
-
-            <ion-icon name="heart-sharp" color="primary"></ion-icon> <br>
-            <ion-label>
-              Favurite
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
-
-            <ion-icon name="settings-sharp" color="primary"></ion-icon>
-            <br>
-            <ion-label>
-              Setting
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
-
-            <ion-icon name="people-sharp" color="primary"></ion-icon>
-            <br>
-            <ion-label>
-              Contact Us
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-    </ion-row>
- 
-
-  </ion-grid>
-
-</ion-content> -->
-
-
-
- <ion-header class="ion-no-border"> 
-   
-  <ion-toolbar class="header">
-    <div _ngcontent-gor-c7="" class="logo">
-     <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
-    </div>
-  
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-
-  <!-- <ion-card class="profiles_account" style="height: 210px;">
-   
-    <ion-card-content>
-      <ion-grid >
-        <ion-row class="profile_card">
-          <ion-col size="6">
-            <ion-card-title>THILADDEV</ion-card-title>
-
-          </ion-col>
-          <ion-col size="6" class="photo">
-            <div class="images_profile">
-              <img src="https://i.ytimg.com/vi/Qt0GFuslOjk/maxresdefault.jpg" alt="">
+            <div class="name_app">
+                <h4 class="ion-text-center">&nbsp; &nbsp;ຕະຫຼາດຮັ່ງມີ &nbsp;</h4>
             </div>
-          </ion-col>
-          <ion-col>
-            <ion-label>
-              Please Login
-            </ion-label>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+            <div class="buton ion-text-center">
+                <ion-button shape="round" routerLink="/login">ລົງຊື່ເຂົ້າໃຊ້</ion-button>
+                <ion-button class="btn_register" shape="round" color="danger" fill="outline" routerLink="/registration">ສະມັກສະມາຊິກ</ion-button>
+            </div>
+        </div>
+    </section>
+    <section class="container_list_menu ion-text-center">
+        <div class="wappper_center_with_hight">
 
-    </ion-card-content>
-    
-  </ion-card> -->
-  <div class="container">
-    <div class="img_logo ion-text-center">
-      <img src="../../assets/imgs/logo.png" alt="">
-    </div>
-    <div class="name_app ">
-      <h4 class="ion-text-center">&nbsp; &nbsp;ຕະຫຼາດຮັ່ງມີ &nbsp;</h4> 
-    </div>
-    <div class="buton  ion-text-center">
-      
-      <ion-button shape="round" (click)="showModalLogin()" >Login</ion-button>
-      <ion-button class="btn_register" shape="round"  color="danger"  fill="outline">Sign Up</ion-button>
-    </div>
-  </div>
-  <ion-grid class="superPorfile">
-    <ion-row>
-      <ion-col class=" box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
+            <ion-row>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin">
+                        <ion-card-content>
+                            <ion-icon name="bag-handle-sharp" color="primary"></ion-icon><br>
 
-            <ion-icon name="wallet-sharp" color="primary"></ion-icon><br>
-            <ion-label>
-              wallet
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
+                            <ion-label>
+                                ອໍເດີ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin">
+                        <ion-card-content>
+                            <ion-icon name="wallet-sharp" color="primary"></ion-icon><br>
 
-            <ion-icon name="reorder-four-sharp" color="primary"></ion-icon><br>
-            <ion-label>
-              My Order
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
+                            <ion-label>
+                                ກະເປົາເງິນ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+            </ion-row>
+            <ion-row>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin">
+                        <ion-card-content>
+                            <ion-icon name="cart-sharp" color="primary"></ion-icon><br>
 
-            <ion-icon name="location-outline" color="primary"></ion-icon><br>
+                            <ion-label>
+                                ກະຕ່າສິນຄ້າ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin">
+                        <ion-card-content>
+                            <ion-icon name="heart-sharp" color="primary"></ion-icon> <br>
+                            <ion-label>
+                                ລາຍການມັກ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+            </ion-row>
+            <ion-row>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin">
+                        <ion-card-content>
+                            <ion-icon name="settings-sharp" color="primary"></ion-icon><br>
+                            <ion-label>
+                                ຕັ້ງຄ່າ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin">
+                        <ion-card-content>
+                            <ion-icon name="chatbubbles-sharp" color="primary"></ion-icon> <br>
 
-            <ion-label>
-              Adrress
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
+                            <ion-label>
+                                ຊ່ວຍເຫຼືອ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+            </ion-row>
+        </div>
 
-            <ion-icon name="heart-sharp" color="primary"></ion-icon> <br>
-            <ion-label>
-              Favurite
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
-
-            <ion-icon name="settings-sharp" color="primary"></ion-icon>
-            <br>
-            <ion-label>
-              Setting
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col class="box-list-menu" size="6">
-        <ion-card>
-          <ion-card-content>
-
-            <ion-icon name="people-sharp" color="primary"></ion-icon>
-            <br>
-            <ion-label>
-              Contact Us
-            </ion-label>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-    </ion-row>
- 
-
-  </ion-grid>
-
-</ion-content> 
-
+    </section>
+</ion-content>
