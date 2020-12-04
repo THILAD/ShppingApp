@@ -7,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductInfoPage implements OnInit {
 
-  constructor() { }
 
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400,
+    startAutoplay:true
+  };
+  constructor() { }
+  slidesDidLoad(slides) {
+    slides.startAutoplay();
+  }
   ngOnInit() {
   }
 

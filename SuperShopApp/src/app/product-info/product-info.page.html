@@ -7,51 +7,271 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <section class="about_product ion-text-center">
-        <div class="img">
-            <img src="../../assets/productImgs/item-1.jpg" alt="">
-        </div>
-        <div class="name_prices ion-text-start">
-            <ion-card class="ion-no-margin" class="ion-no-border">
-                <h5>ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ</h5>
-                <h6>15000ກີບ</h6>
-                <p>19000ກີບ</p>
-
-                <div class="rate_buyied_like">
-
-                    <div class="rate_buyied">
-                        <div class="rate">
-                            <ion-icon name="star-sharp"></ion-icon>
-                            <ion-icon name="star-sharp"></ion-icon>
-                            <ion-icon name="star-sharp"></ion-icon>
-                            <ion-icon name="star-sharp"></ion-icon>
-                            <ion-icon name="star-half-sharp"></ion-icon>
-                            <span>4.5</span>
-                        </div>
-                        <div class="buyieds">
-                            210 ອັນ
-                        </div>
-                    </div>
-                    <div class="liked">
-                        <ion-icon name="heart-sharp"></ion-icon>
-                    </div>
-                </div>
-            </ion-card>
-        </div>
-
-
-        <!-- <ion-list>
-            <ion-item class="spend">
-                <div class="item_inner">
-                    <ion-row>
-                        <ion-col size="12">
+    <section class="container">
+        <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" pager="true" [options]="slideOpts">
+            <ion-slide>
+                <div class="img">
+                    <img src="../../assets/productImgs/item-1.jpg" alt="">
+                </div><br>
+            </ion-slide>
+            <ion-slide>
+                <div class="img">
+                    <img src="../../assets/productImgs/item-3.jpg" alt="">
+                </div><br>
+            </ion-slide>
+            <ion-slide>
+                <div class="img">
+                    <img src="../../assets/productImgs/item-5.jpg" alt="">
+                </div><br>
+            </ion-slide>
+        </ion-slides>
+        <ion-list class="ion-no-border">
+            <ion-item class="ion-no-border" lines="none">
+                <ion-row class="ion-text-center">
+                    <div class="wrapper">
+                        <div class="produc_name">
                             <h5>ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ</h5>
-                            <h6>15000ກີບ</h6>
-                            <p>19000ກີບ</p>
-                        </ion-col>
-                    </ion-row>
-                </div>
+                        </div>
+                        <div class="price_rate">
+                            <div class="price">
+                                <h6>15000ກີບ</h6>
+                                <p>19000ກີບ</p>
+                            </div>
+                            <div class="rate">
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-half-sharp"></ion-icon>
+                                <span>4.5</span>
+                                <div class="buyieds">
+                                    <p> ຂາຍແລ້ວ210 ອັນ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ion-row>
             </ion-item>
-        </ion-list> -->
+        </ion-list>
+    </section>
+    <section class="container2">
+        <ion-item class="ion-no-margin" lines="none">
+            <ion-row>
+                <div class="wrapper_oldner_shop">
+                    <div class="shop_oldner">
+                        <div class="oldner_left">
+                            <div class="img">
+                                <img src="../../assets/productImgs/item-4.jpg" alt="">
+                                <p>ຄະແນນຄວາມນິຍົມ:
+                                    <span color="primary"> 
+                                     <ion-icon name="star-sharp"></ion-icon>
+                                    <ion-icon name="star-sharp"></ion-icon>
+                                    <ion-icon name="star-sharp"></ion-icon>
+                                    <ion-icon name="star-sharp"></ion-icon>
+                                    <ion-icon name="star-half-sharp"></ion-icon>
+                                   </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="oldner_right">
+                            <ion-button fill="outline" color="medium" size="small">
+                                <ion-label>ເບິ່ງໜ້າຮ້ານ</ion-label>
+                            </ion-button>
+                            <p>ອອກແລ້ວທັງໝົດ: 2133ອັນ</p>
+                        </div>
+                    </div>
+
+                    <div class="oldner_product ion-text-center">
+                        <div class="product">
+                            <div class="img">
+                                <img src="../../assets/productImgs/item-15.jpg" alt="">
+                            </div>
+                            <div class="product_info">
+                                <p>
+                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
+                                </p>
+                                <div class="price_buy">
+                                    <div class="price">
+                                        <ion-label>19000ກີບ</ion-label>
+                                    </div>
+                                    <div class="buy">
+                                        <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div class="img">
+                                <img src="../../assets/productImgs/item-13.jpg" alt="">
+                            </div>
+                            <div class="product_info">
+                                <p>
+                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
+                                </p>
+                                <div class="price_buy">
+                                    <div class="price">
+                                        <ion-label>19000ກີບ</ion-label>
+                                    </div>
+                                    <div class="buy">
+                                        <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div class="img">
+                                <img src="../../assets/productImgs/item-1.jpg" alt="">
+                            </div>
+                            <div class="product_info">
+                                <p>
+                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
+                                </p>
+                                <div class="price_buy">
+                                    <div class="price">
+                                        <ion-label>19000ກີບ</ion-label>
+                                    </div>
+                                    <div class="buy">
+                                        <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img">
+                                <img src="../../assets/productImgs/item-12.jpg" alt="">
+                            </div>
+                            <div class="product_info">
+                                <p>
+                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
+                                </p>
+                                <div class="price_buy">
+                                    <div class="price">
+                                        <ion-label>19000ກີບ</ion-label>
+                                    </div>
+                                    <div class="buy">
+                                        <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img">
+                                <img src="../../assets/productImgs/item-11.jpg" alt="">
+                            </div>
+                            <div class="product_info">
+                                <p>
+                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
+                                </p>
+                                <div class="price_buy">
+                                    <div class="price">
+                                        <ion-label>19000ກີບ</ion-label>
+                                    </div>
+                                    <div class="buy">
+                                        <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </ion-row>
+        </ion-item>
+    </section>
+    <section class="container3">
+        <ion-item lines="none">
+            <ion-row class="wrapper">
+                <div class="product_all_product">
+                    <h4>ສິນຄ້າທີ່ກ່ຽວຂ້ອງ</h4>
+                    <ion-button class="ion-no-margin" fill="outline" color="medium" size="small">
+                        <ion-label>ສິນຄ້າທັງຫມົດ</ion-label>
+                    </ion-button>
+                </div>
+
+            </ion-row>
+        </ion-item>
+    </section>
+
+    <section class="porduct_container">
+
+        <ion-row class="my_row">
+
+
+            <ion-item class='ion-no-border'>
+                <div class="my_colum wapper_box_item">
+
+                    <div class="item1">
+                        <img src="../../assets/productImgs/item-8.jpg" alt="" /> <br>
+                    </div>
+                    <div class="nameProduct line-clamp">
+                        <p class="cate">ເກີນໄນກີ້ແຟຊັ່ນສະລັບທ່ານຊາຍທີ່ມາເເຮງແຊງທາງໂຄ້ງ</p>
+                    </div>
+                    <div class="price_product">
+                        <div class="buyied">
+                            <p>ຂາຍແລ້ວ <br> 210 ອັນ</p>
+                        </div>
+                        <div class=" price">
+                            <p>14000K</p>
+                        </div>
+                    </div>
+                </div>
+
+            </ion-item>
+            <ion-item class="ion-no-margin">
+                <div class="my_colum wapper_box_item">
+
+                    <div class="item1">
+                        <img src="../../assets/productImgs/item-3.jpg" alt="" /> <br>
+                    </div>
+                    <div class="nameProduct line-clamp">
+                        <p class="cate">ເກີນໄນກີ້ແຟຊັ່ນສະລັບທ່ານຊາຍທີ່ມາເເຮງແຊງທາງໂຄ້ງ</p>
+                    </div>
+                    <div class="price_product">
+                        <div class="buyied">
+                            <p>ຂາຍແລ້ວ <br> 210 ອັນ</p>
+                        </div>
+                        <div class=" price">
+                            <p>14000K</p>
+                        </div>
+                    </div>
+                </div>
+
+            </ion-item>
+
+        </ion-row>
+
     </section>
 </ion-content>
+
+
+<ion-footer>
+    <div class="wrapper">
+        <div class="footer_left ion-text-center">
+            <div class="shop">
+                <ion-icon name="file-tray-stacked-outline" color="medium"></ion-icon><br>
+                <ion-label>
+                    ຫນ້າຮ້ານຄ້າ
+                </ion-label>
+            </div>
+            <div class="heart_like">
+                <ion-icon name="heart-outline" color="medium"></ion-icon><br>
+                <ion-label>
+                    ກົດຖືກໃຈ
+                </ion-label>
+            </div>
+            <div class="chatting">
+                <ion-icon name="chatbubble-ellipses-outline" color="medium"></ion-icon><br>
+                <ion-label>
+                    ແຊັດຫາພະນັກງານ
+                </ion-label>
+            </div>
+        </div>
+        <div class="footer_right ion-text-center">
+            <div class="buy1 ion-text-center">
+                <ion-label>ກົດສັ່ງຊື່</ion-label>
+            </div>
+        </div>
+    </div>
+</ion-footer>

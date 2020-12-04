@@ -15,106 +15,375 @@ ion-content {
     --background: #f4f5f8;
 }
 
-// info poduct400
-.about_product {
-    margin: 0 auto;
-    .img {
+// container 1
+.container {
+    .wrapper {
         width: 100%;
-        height: 100%;
-        img {
-            max-width: 100%;
-            max-height: 300px;
-        }
     }
-    .name_prices ion-card {
-        margin: 0;
-        border: 0 !important;
-        box-shadow: 0 !important;
-        border: none !important;
-        border-style: none !important;
-        width: 100%;
-        font-family: boonhom;
-        h5 {
-            margin-left: 14px;
+    ion-row {
+        .img {
+            width: 100%;
+            height: 100%;
+            img {
+                max-width: 100%;
+                max-height: 300px;
+            }
         }
-        h6 {
-            color: #f8a30e;
-            margin-left: 14px;
+        .produc_name {
+            font-family: boonhom;
         }
-        p {
-            text-decoration: line-through;
-            color: #92949c;
-            font-size: small;
-            margin-left: 14px;
-            margin-top: -10px;
-        }
-        .rate_buyied_like {
-            margin-left: 14px;
+        .price_rate {
+            padding: 10px 0px 0px 0px;
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            .rate_buyied {
-                display: flex;
-                .buyieds {
-                    margin-left: 10px;
+            font-family: boonhom;
+            .price {
+                margin-left: 8px;
+                h6 {
+                    margin-top: -10px;
+                    color: #f8a30e;
+                }
+                p {
+                    text-decoration: line-through;
+                    color: #92949c;
+                    font-size: small;
+                }
+            }
+            .rate {
+                ion-icon {
+                    color: #f8a30e;
+                }
+                span {
+                    margin-left: 7px;
+                    color: #92949c;
+                }
+                .buyieds p {
+                    color: #92949c;
+                    font-size: small;
                 }
             }
         }
     }
-    ion-item {
-        margin-top: 40px;
-        padding: 14px 20px 10px 20px;
-        min-height: unset !important;
-        --inner-padding-end: 0px;
-        --inner-min-height: unset !important;
-        --padding-start: 0;
-        // --highligh-color-focused: var(--transparent) !important;
-        margin-bottom: 5px;
-        // background: var(--bg-color);
-        box-shadow: rgb(204, 44, 44);
-        --background: var(--transparent);
-        .item_inner {
+}
+
+//cintainer
+.container2 {
+    ion-row {
+        width: 100%;
+    }
+    width: 100%;
+    margin-top: 10px;
+    .wrapper_oldner_shop {
+        width: 100%;
+        .shop_oldner {
             width: 100%;
-            overflow: hidden;
-            align-items: flex-start !important;
-            ion-row {
-                margin: 0 -5px;
-                align-items: center;
-                padding-bottom: 8px;
-                ion-col {
-                    padding: 0 5px;
-                    h3 {
-                        margin: 0;
-                        color: var(--white);
-                        font-size: 1.14rem;
-                    }
-                    h4 {
-                        margin: 0;
-                        color: var(--white);
-                        font-size: .95rem;
-                        font-weight: 400;
-                    }
-                    h5 {
-                        margin: 0;
-                        font-size: .95rem;
-                        font-weight: 500;
-                    }
-                    p {
-                        margin: 0;
-                        color: var(--text-light);
-                        font-size: .8rem;
+            // background-color: #f8a30e;
+            display: flex;
+            justify-content: space-between;
+            .oldner_left img {
+                margin-top: 8px;
+                width: 50px;
+                height: 50px;
+            }
+            p {
+                font-family: boonhom;
+                color: #92949c;
+                font-size: small;
+                span {
+                    ion-icon {
+                        position: relative;
+                        top: 2px;
+                        color: #f8a30e;
                     }
                 }
             }
-        }
-        &.add {
-            .item_inner ion-row ion-col h5 {
-                color: #63BC30;
+            .oldner_right {
+                font-family: boonhom;
+                ion-button {
+                    position: relative;
+                    top: 6px;
+                    left: 20px;
+                    ion-label {
+                        font-family: boonhom;
+                        color: #f8a30e;
+                    }
+                }
+                p {
+                    margin-top: 38px;
+                    font-family: boonhom;
+                    color: #92949c;
+                    font-size: small;
+                }
             }
         }
-        &.spend {
-            .item_inner ion-row ion-col h5 {
-                color: #FF2E2E;
+        .oldner_product {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            .product {
+                width: 120px;
+                height: 160px;
+                margin-left: 9px;
+                .img {
+                    width: 100%;
+                    height: 100px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .product_info {
+                    margin-top: -10px;
+                    font-family: boonhom;
+                    font-size: 12px;
+                    p {
+                        display: -webkit-box;
+                        max-width: 400px;
+                        height: 20px;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        line-height: 1.625;
+                    }
+                    .price_buy {
+                        margin-top: -10px;
+                        display: flex;
+                        justify-content: space-between;
+                        .price {
+                            margin-top: 10px;
+                            font-family: boonhom;
+                            color: #f8a30e;
+                            font-weight: bold;
+                        }
+                        .buy {
+                            font-size: x-small;
+                            color: #92949c;
+                        }
+                    }
+                }
+                display: inline-block;
+                white-space: normal;
             }
         }
+    }
+}
+
+// container 3
+.container3 {
+    width: 100%;
+    .wrapper {
+        width: 100%;
+        .product_all_product {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            h4 {
+                color: #92949c;
+                font-family: boonhom;
+            }
+            ion-button {
+                margin-top: 12px;
+                ion-label {
+                    font-family: boonhom;
+                    color: #f8a30e;
+                }
+            }
+        }
+        .price_product {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -15px;
+            .price {
+                font-size: 9px;
+                margin-left: 12px;
+                margin-top: 10px;
+            }
+            .buyied {
+                margin-right: 5px;
+                color: #f8a30e;
+            }
+        }
+    }
+}
+
+.porduct_container {
+    margin: auto;
+    width: 100%;
+    .my_row {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        .item1 {
+            img {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 140px;
+            }
+        }
+        .wapper_box_item {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 10px;
+            ion-item {
+                width: 100%;
+                background-color: darkcyan;
+            }
+            .nameProduct {
+                margin-top: -15px;
+                overflow: hidden;
+                p {
+                    font-family: boonhom;
+                    display: -webkit-box;
+                    max-width: 400px;
+                    height: 20px;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    line-height: 1.625;
+                }
+            }
+            .price_product {
+                display: flex;
+                justify-content: space-between;
+                margin-top: -25px;
+                .price {
+                    margin-right: 5px;
+                    color: #f8a30e;
+                    font-family: boonhom;
+                }
+                .buyied {
+                    font-size: 12px;
+                    margin-left: 12px;
+                    margin-top: 10px;
+                    font-family: boonhom;
+                    color: #92949c;
+                }
+            }
+        }
+        flex-direction: row;
+        // justify-content: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        .my_colum {
+            margin-top: 10px;
+            justify-content: start;
+            margin: auto;
+            width: 100%;
+            height: 222px;
+            // background-color: gray;
+            // border: solid rebeccapurple 1px;
+        }
+    }
+}
+
+///foooter
+ion-footer {
+    .wrapper {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        .footer_left {
+            display: flex;
+            justify-content: center;
+            width: 60%;
+            div {
+                padding: 16px;
+                ion-label {
+                    font-size: x-small;
+                    color: #92949c;
+                    font-family: boonhom;
+                }
+            }
+        }
+        .footer_right {
+            width: 40%;
+            display: flex;
+            .buy1 {
+                width: 100%;
+                background-color: #f8a30e;
+                display: flex;
+                align-items: center;
+                ion-label {
+                    margin-left: 40%;
+                    color: white;
+                    font-weight: bold;
+                    font-weight: 700;
+                    font-family: boonhom;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+//ipad  pro
+@media screen and (max-width: 1024px) {
+    .my_colum {
+        max-width: 235px;
+        // color: rgb(82, 185, 78);
+    }
+}
+
+//ipad 
+@media screen and (max-width: 768px) {
+    .my_colum {
+        max-width: 230px;
+        // color: rgb(82, 185, 78);
+    }
+}
+
+// surface duo
+@media screen and (max-width: 540px) {
+    .my_colum {
+        max-width: 160px;
+        // color: rgb(82, 185, 78);
+    }
+}
+
+//iphone 6 7 8 plus
+@media screen and (max-width: 414px) {
+    .my_colum {
+        max-width: 180px;
+        // color: rgb(82, 185, 78);
+    }
+}
+
+//iphone 6 7 8 10 x 
+@media screen and (max-width: 375px) {
+    .my_colum {
+        max-width: 145px;
+        // color: rgb(197, 27, 27);
+    }
+}
+
+//galaxy s5
+@media screen and (max-width: 360px) {
+    .my_colum {
+        max-width: 150px;
+        // color: rgb(101, 18, 168);
+    }
+}
+
+//iphone 5
+@media screen and (max-width: 320px) {
+    .my_colum {
+        max-width: 130px;
+        // color: rgb(177, 150, 150);
+    }
+}
+
+//gLxy fold
+@media screen and (max-width: 280px) {
+    .my_colum {
+        max-width: 210px;
+        // color: rgb(177, 150, 150);
+        margin-left: 20px;
     }
 }
