@@ -1,0 +1,156 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button [defaultHref]=""></ion-back-button>
+        </ion-buttons>
+        <div _ngcontent-gor-c7="" class="logo">
+            <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="name_location">
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <div class="wrapper">
+                        <div class="location">
+                            <ion-icon name="location-sharp" color="primary"></ion-icon>
+                        </div>
+                        <div class="locationText">
+                            <ion-text class="ion-no-padding">{{user.firstName}}</ion-text>
+                            <p>ນະຄອນຫຼວງວຽງຈັນ ເມືອງສີໂຄດ ບ້ານປາກທ້າງ ຮ້ານ ກີ້ກີ້ໄປຊະນີ <span>+8562095458604 </span></p>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="card-container">
+        <section class=" profile_wrappper ">
+            <div class="item1 ">
+                <div class="img ">
+                    <img _ngcontent-gor-c7=" " src="../../assets/icon/shopicon.png " />
+                    <h5>{{card.vendorlist[index].vendor_name}}</h5>
+                </div>
+            </div>
+        </section>
+        <ion-list *ngFor="let productlist of card?.vendorlist[index]?.product_list;let i = index ">
+            <ion-item-sliding>
+                <ion-item>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size=3>
+                                <div class="img ">
+                                    <!-- <img src="../../assets/productImgs/product08.png " alt=" "> -->
+                                    <img [src]="load_image(productlist?.imagePath,productlist?.image)" />
+
+                                </div>
+                            </ion-col>
+                            <ion-col size=9>
+                                <div class="price_name ">
+                                    <ion-label> {{productlist.name}}</ion-label>
+                                    <ion-text>
+                                        <p>{{productlist.quantity*productlist.price}} / <span>1000.000.000 ກີບ</span> </p>
+                                    </ion-text>
+                                    <ion-label>
+                                    </ion-label>
+                                </div>
+
+                                <section class="mycounter ">
+                                    <div class="left_count ">
+                                        <h6>ຈໍານວນ:</h6>
+                                    </div>
+                                    <div class="right_count ">
+                                        <div class="box_count ">
+                                            <ion-button size="small " color="light " class="ion-no-margin " (click)="deleteCount(i) ">-</ion-button>
+                                            <ion-label class="ion-no-margin ">{{productlist.quantity}}</ion-label>
+                                            <ion-button size="small " color="medium " class="ion-no-margin " (click)="plusCount(i) ">+ </ion-button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </ion-col>
+
+                        </ion-row>
+                    </ion-grid>
+
+                </ion-item>
+
+                <ion-item-options>
+                    <ion-item-option color="danger " (click)="reMoveItem(i)">
+                        ລົບ
+                    </ion-item-option>
+
+                </ion-item-options>
+            </ion-item-sliding>
+
+
+        </ion-list>
+
+    </div>
+    <div class="payments ">
+        <ion-list class="ion-no-margin ">
+            <ion-item lines="none " (click)="onselect(1) ">
+                <img src="../../assets/icon/logo2.png " alt=" ">
+                <ion-label>ຈ່າຍຜ່ານວັນເພ</ion-label>
+                <!-- <ion-note slot="end "> -->
+                <!-- <ion-icon name="checkmark-sharp" *ngIf="showselect==true"></ion-icon> -->
+                <!-- <ion-icon name="checkmark-sharp" *ngIf="showselect==true"></ion-icon>
+
+                </ion-note> -->
+                <ion-icon name="checkmark-done-sharp" color="medium" *ngIf="showselect==true"></ion-icon>
+
+            </ion-item>
+            <ion-item (click)="onselect(0) ">
+                <img src="../../assets/icon/riders.png " alt=" ">
+                <ion-label>ຈ່າຍທີ່ປາຍທາງ</ion-label>
+                <!-- <ion-note slot="end ">
+                    <ion-icon name="checkmark-sharp" *ngIf="showselect==false"></ion-icon>
+                </ion-note> -->
+                <ion-icon name="checkmark-done-sharp" color="medium" *ngIf="showselect==false"></ion-icon>
+
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer>
+    <section class="foooter ">
+        <div class="wrapper ">
+            <div class="footer_left ion-text-center ">
+                <div class="total ">
+                    <ion-label>
+                        ລາຄາລວມ:
+                    </ion-label><br>
+                    <ion-label>
+                        ລາຄາປົກກະຕິ:
+                    </ion-label><br>
+
+                    <ion-label>
+                        ສ່ວນລຸດ:
+                    </ion-label>
+                </div>
+                <div class="price ">
+                    <ion-label color="primary ">
+                        {{countotal()}} ກີບ
+                    </ion-label><br>
+                    <ion-label class="line " id="ok ">
+
+                        <span>  18000 ກີບ</span>
+                    </ion-label><br>
+                    <ion-text>
+                        0 ກີບ
+                    </ion-text>
+
+                </div>
+
+            </div>
+            <div class="footer_right ion-text-center " (click)="gotoCheckbin()">
+                <div class="buy1 ion-text-center ">
+                    <ion-label>ສັ່ງຊື່</ion-label>
+                </div>
+            </div>
+        </div>
+    </section>
+</ion-footer>

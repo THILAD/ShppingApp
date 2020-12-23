@@ -1,0 +1,95 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button [defaultHref]=""></ion-back-button>
+        </ion-buttons>
+        <div _ngcontent-gor-c7="" class="logo">
+            <span>
+        <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png" />
+      </span>
+        </div>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <section class="profile_wrappper">
+        <div class="item1">
+            <div class="profile_vendor">
+                <div class="img">
+                    <img _ngcontent-gor-c7="" src="../../assets/icon/shopicon.png" />
+                </div>
+                <div class="vendor_follow">
+                    <ion-button color="primary" size="small">ຕິດຕາມ</ion-button>
+                    <ion-button fill="outline" color="light" size="small"><span>ແຊັດ</span></ion-button>
+                </div>
+            </div>
+            <div class="active_name">
+                <h5>{{vendor[0]?.vendor_name}}</h5>
+                <ion-text> ອອນໄລນ໌ລ້າສຸດ 4ນາທີທີ່ແລ້ວ </ion-text>
+            </div>
+            <br />
+        </div>
+    </section>
+    <!-- top selling -->
+    <section class="newsproduct">
+        <ion-item lines="none">
+            <ion-row class="wrapper">
+                <div class="product_all_product">
+                    <h4>ສິນຄ້າມາໃໝ່</h4>
+                    <ion-button class="ion-no-margin" fill="outline" color="medium" size="small">
+                        <ion-label>ສິນຄ້າທັງຫມົດ</ion-label>
+                    </ion-button>
+                </div>
+            </ion-row>
+        </ion-item>
+    </section>
+    <!-- top selling -->
+    <div class="oldner_product ion-text-center">
+        <div class="product" *ngFor="let topselling of topselling">
+            <div class="img">
+                <!-- <img [src]="load_image(topselling.imagePath,topselling.image)" /> -->
+                <img [src]="load_image(topselling?.productImage[0]?.containerName,topselling?.productImage[0]?.image)" />
+                <!-- <img src="../../assets/productImgs/item-14.jpg" alt=""> -->
+            </div>
+            <div class="product_info">
+                <p>{{topselling.product.name}}</p>
+                <div class="price_buy">
+                    <div class="price">
+                        <ion-label>{{topselling.product.price}}ກີບ</ion-label>
+                    </div>
+                    <div class="buy">
+                        <ion-label>ຂາຍແລ້ວ <br />210ອັນ</ion-label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- new product -->
+    <section class="newsproduct">
+        <ion-item lines="none">
+            <ion-row class="wrapper">
+                <div class="product_all_product">
+                    <h4>ສິນຄ້າມາໃໝ່</h4>
+                    <ion-button class="ion-no-margin" fill="outline" color="medium" size="small">
+                        <ion-label>ສິນຄ້າທັງຫມົດ</ion-label>
+                    </ion-button>
+                </div>
+            </ion-row>
+        </ion-item>
+    </section>
+
+    <!-- product new -->
+    <section class="product_container_new">
+        <ion-row class="ion-text-center">
+            <div class="product_box" *ngFor="let product_vendor of vendorProduct_data?.data" (click)="productNext(product_vendor.productId)">
+                <div class="img">
+                    <img [src]="load_image(product_vendor?.productImage?.containerName,product_vendor?.productImage?.image)" />
+                </div>
+                <p>{{product_vendor.name}}</p>
+                <div class="price_rate">
+                    <p>{{product_vendor.price}}ກີບ</p>
+                    <span> ຂາຍແລ້ວ 221ອັນ</span>
+                </div>
+            </div>
+        </ion-row>
+    </section>
+</ion-content>

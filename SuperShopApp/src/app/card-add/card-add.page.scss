@@ -1,0 +1,182 @@
+* {
+    font-family: boonhom;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 20px;
+    img {
+        width: 50px;
+    }
+}
+
+.profile_wrappper {
+    width: 100%;
+    height: 75px;
+    // background-color: rebeccapurple;
+    .item1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+        .img {
+            display: flex;
+            img {
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                margin-top: 11px;
+            }
+            h5 {
+                margin-top: 15px;
+                margin-left: 10px;
+                color: #92949c;
+            }
+        }
+        .profile_vendor {
+            display: block;
+            ion-button {
+                span {
+                    color: #92949c;
+                }
+            }
+        }
+        .active_name {
+            margin: 0;
+            margin-left: -120px;
+            margin-top: 10px;
+            ion-text {
+                font-size: 13px;
+                color: #92949c;
+            }
+        }
+        .vendor_follow {
+            display: inline;
+        }
+    }
+}
+
+ion-list {
+    ion-item-sliding {
+        ion-item {
+            ion-grid {
+                ion-row {
+                    ion-col {
+                        .img {
+                            img {
+                                width: 100px;
+                                border-radius: 30px;
+                            }
+                        }
+                        .price_name {
+                            ion-label {
+                                font-family: boonhom;
+                                width: 15em;
+                                overflow: hidden;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 5;
+                                -webkit-box-orient: vertical;
+                                p {
+                                    text-decoration: line-through;
+                                    color: #92949c;
+                                }
+                                span {
+                                    color: #92949c;
+                                    font-size: small;
+                                }
+                            }
+                        }
+                        .wrapper {
+                            width: 40vw;
+                            height: 50px;
+                            padding: 10px;
+                            display: flex;
+                            border-radius: 15px;
+                            .plusminus {
+                                height: 100%;
+                                width: 30%;
+                                background: white;
+                                border: none;
+                                font-size: 30px;
+                                color: #5f5fce;
+                            }
+                            .num {
+                                height: 100%;
+                                width: 39%;
+                                border: none;
+                                font-size: 20px;
+                            }
+                            input {
+                                text-align: center;
+                            }
+                            input[type="number"] {
+                                -webkit-appearance: textfield !important;
+                                -moz-appearance: textfield !important;
+                                appearance: textfield !important;
+                            }
+                            input[type=number]::-webkit-inner-spin-button,
+                            input[type=number]::-webkit-outer-spin-button {
+                                -webkit-appearance: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+///foooter
+.foooter {
+    .wrapper {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: start;
+        .footer_left {
+            text-align: start;
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            padding: 16px;
+            .total {
+                text-align: start;
+                ion-label {
+                    font-size: 14px;
+                    color: #92949c;
+                    font-family: boonhom;
+                }
+            }
+            .price {
+                ion-label {
+                    span {
+                        text-decoration: line-through;
+                        font-size: 12px;
+                        color: #92949c;
+                    }
+                }
+                ion-text {
+                    color: #92949c;
+                }
+            }
+        }
+        .footer_right {
+            width: 40%;
+            display: flex;
+            .buy1 {
+                width: 100%;
+                background-color: #f8a30e;
+                display: flex;
+                align-items: center;
+                ion-label {
+                    margin-left: 40%;
+                    color: white;
+                    font-weight: bold;
+                    font-weight: 700;
+                    font-family: boonhom;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

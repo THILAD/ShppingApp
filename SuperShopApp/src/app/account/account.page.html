@@ -2,14 +2,13 @@
     <ion-toolbar class="header">
         <div _ngcontent-gor-c7="" class="logo">
             <span>
-        <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png" />
-      </span>
+      <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png" />
+    </span>
         </div>
     </ion-toolbar>
 </ion-header>
-
 <ion-content>
-    <section class="login_logo">
+    <section class="login_logo" *ngIf="!login">
         <div class="container">
             <div class="img_logo ion-text-center">
                 <img src="../../assets/imgs/logo.png" alt="" />
@@ -23,16 +22,31 @@
             </div>
         </div>
     </section>
+    <section class="login_logo" *ngIf="login">
+        <div class="container">
+            <div class="img_logo ion-text-center">
+                <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTM2OTI2NTY2Mjg5NTE2MTI5/justin_bieber_2015_photo_courtesy_dfree_shutterstock_348418241_croppedjpg.jpg" alt="" />
+            </div>
+            <div class="name_app">
+                <h4 class="ion-text-center">&nbsp; &nbsp;{{user.firstName}} &nbsp;</h4>
+            </div>
+
+        </div>
+    </section>
     <section class="container_list_menu ion-text-center">
         <div class="wappper_center_with_hight">
 
             <ion-row>
                 <div class="menu">
                     <ion-card class="menu-card ion-no-margin">
+
                         <ion-card-content>
+                            <ion-badge size="1" color="warning" class="ion-no-margin">66</ion-badge>
+
                             <ion-icon name="bag-handle-sharp" color="primary"></ion-icon><br>
 
                             <ion-label>
+
                                 ອໍເດີ
                             </ion-label>
                         </ion-card-content>
@@ -52,8 +66,10 @@
             </ion-row>
             <ion-row>
                 <div class="menu">
-                    <ion-card class="menu-card ion-no-margin">
+                    <ion-card class="menu-card ion-no-margin" (click)="cartNext()">
                         <ion-card-content>
+                            <ion-badge size="1" color="warning" class="ion-no-margin" *ngIf="cartNumber">{{cartNumber}}</ion-badge>
+
                             <ion-icon name="cart-sharp" color="primary"></ion-icon><br>
 
                             <ion-label>
@@ -65,6 +81,8 @@
                 <div class="menu">
                     <ion-card class="menu-card ion-no-margin">
                         <ion-card-content>
+                            <ion-badge size="1" color="warning" class="ion-no-margin">66</ion-badge>
+
                             <ion-icon name="heart-sharp" color="primary"></ion-icon> <br>
                             <ion-label>
                                 ລາຍການມັກ
@@ -74,7 +92,7 @@
                 </div>
             </ion-row>
             <ion-row>
-                <div class="menu">
+                <div class="menu" (click)="onLogout()">
                     <ion-card class="menu-card ion-no-margin">
                         <ion-card-content>
                             <ion-icon name="settings-sharp" color="primary"></ion-icon><br>

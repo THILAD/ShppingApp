@@ -1,5 +1,8 @@
 <ion-header class="ion-no-border">
     <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
         <div _ngcontent-gor-c7="" class="logo">
             <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
         </div>
@@ -9,7 +12,7 @@
 <ion-content>
     <section class="container">
         <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" pager="true" [options]="slideOpts">
-            <ion-slide>
+            <!-- <ion-slide>
                 <div class="img">
                     <img src="../../assets/productImgs/item-1.jpg" alt="">
                 </div><br>
@@ -18,10 +21,11 @@
                 <div class="img">
                     <img src="../../assets/productImgs/item-3.jpg" alt="">
                 </div><br>
-            </ion-slide>
-            <ion-slide>
+            </ion-slide> -->
+            <ion-slide *ngFor="let Image of product_item?.data?.productImage">
                 <div class="img">
-                    <img src="../../assets/productImgs/item-5.jpg" alt="">
+                    <!-- <img src="../../assets/productImgs/item-3.jpg" alt=""> -->
+                    <img [src]="load_image(Image?.containerName,Image?.image)">
                 </div><br>
             </ion-slide>
         </ion-slides>
@@ -30,11 +34,11 @@
                 <ion-row class="ion-text-center">
                     <div class="wrapper">
                         <div class="produc_name">
-                            <h5>ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ</h5>
+                            <h5>{{product_item?.data.name}}</h5>
                         </div>
                         <div class="price_rate">
                             <div class="price">
-                                <h6>15000ກີບ</h6>
+                                <h6>{{product_item?.data.price}}</h6>
                                 <p>19000ກີບ</p>
                             </div>
                             <div class="rate">
@@ -45,7 +49,7 @@
                                 <ion-icon name="star-half-sharp"></ion-icon>
                                 <span>4.5</span>
                                 <div class="buyieds">
-                                    <p> ຂາຍແລ້ວ210 ອັນ</p>
+                                    <p> ຂາຍແລ້ວ 210 ອັນ</p>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +66,8 @@
                         <div class="oldner_left">
                             <div class="img">
                                 <img src="../../assets/productImgs/item-4.jpg" alt="">
-                                <p>ຄະແນນຄວາມນິຍົມ:
+
+                                <p>ຄະແນນຄວາມນິຍົມ: <br>
                                     <span color="primary"> 
                                      <ion-icon name="star-sharp"></ion-icon>
                                     <ion-icon name="star-sharp"></ion-icon>
@@ -72,27 +77,32 @@
                                    </span>
                                 </p>
                             </div>
+                            <div class="vendor_name_shop">
+                                <ion-label>{{vendor[0]?.vendor_name}}</ion-label>
+                                <p>852095458604</p>
+
+                            </div>
                         </div>
-                        <div class="oldner_right">
+                        <div class="oldner_right" (click)="nextpageGetId()">
                             <ion-button fill="outline" color="medium" size="small">
                                 <ion-label>ເບິ່ງໜ້າຮ້ານ</ion-label>
                             </ion-button>
-                            <p>ອອກແລ້ວທັງໝົດ: 2133ອັນ</p>
+                            <p>ຂາຍອອກແລ້ວທັງໝົດ: <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2133 ອັນ
+                            </p>
                         </div>
                     </div>
 
                     <div class="oldner_product ion-text-center">
-                        <div class="product">
+                        <div class="product" (click)="productVendorNext(product_vendor.productId)" *ngFor="let  product_vendor of vendorProduct_data?.data">
                             <div class="img">
-                                <img src="../../assets/productImgs/item-15.jpg" alt="">
+                                <!-- <img [src]="load_image(product_vendor.imagePath,product_vendor.image)" /> -->
+                                <img [src]="load_image(product_vendor?.productImage?.containerName,product_vendor?.productImage?.image)" />
                             </div>
                             <div class="product_info">
-                                <p>
-                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
-                                </p>
+                                <p>{{product_vendor.name}} </p>
                                 <div class="price_buy">
                                     <div class="price">
-                                        <ion-label>19000ກີບ</ion-label>
+                                        <ion-label>{{product_vendor.price}}ກີບ</ion-label>
                                     </div>
                                     <div class="buy">
                                         <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
@@ -100,81 +110,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="product">
-                            <div class="img">
-                                <img src="../../assets/productImgs/item-13.jpg" alt="">
-                            </div>
-                            <div class="product_info">
-                                <p>
-                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
-                                </p>
-                                <div class="price_buy">
-                                    <div class="price">
-                                        <ion-label>19000ກີບ</ion-label>
-                                    </div>
-                                    <div class="buy">
-                                        <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <div class="img">
-                                <img src="../../assets/productImgs/item-1.jpg" alt="">
-                            </div>
-                            <div class="product_info">
-                                <p>
-                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
-                                </p>
-                                <div class="price_buy">
-                                    <div class="price">
-                                        <ion-label>19000ກີບ</ion-label>
-                                    </div>
-                                    <div class="buy">
-                                        <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="img">
-                                <img src="../../assets/productImgs/item-12.jpg" alt="">
-                            </div>
-                            <div class="product_info">
-                                <p>
-                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
-                                </p>
-                                <div class="price_buy">
-                                    <div class="price">
-                                        <ion-label>19000ກີບ</ion-label>
-                                    </div>
-                                    <div class="buy">
-                                        <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="img">
-                                <img src="../../assets/productImgs/item-11.jpg" alt="">
-                            </div>
-                            <div class="product_info">
-                                <p>
-                                    ເສື້ອຢືດເເຟຊັ່ນທ່ານຍິງ ຮອດຮິດທັນສະໄໝ 2020 ໃນກຸ່ມໄວລຸ້ນ
-                                </p>
-                                <div class="price_buy">
-                                    <div class="price">
-                                        <ion-label>19000ກີບ</ion-label>
-                                    </div>
-                                    <div class="buy">
-                                        <ion-label>ຂາຍແລ້ວ <br>210ອັນ</ion-label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </ion-row>
@@ -193,55 +128,20 @@
             </ion-row>
         </ion-item>
     </section>
-
-    <section class="porduct_container">
-
-        <ion-row class="my_row">
-
-
-            <ion-item class='ion-no-border'>
-                <div class="my_colum wapper_box_item">
-
-                    <div class="item1">
-                        <img src="../../assets/productImgs/item-8.jpg" alt="" /> <br>
-                    </div>
-                    <div class="nameProduct line-clamp">
-                        <p class="cate">ເກີນໄນກີ້ແຟຊັ່ນສະລັບທ່ານຊາຍທີ່ມາເເຮງແຊງທາງໂຄ້ງ</p>
-                    </div>
-                    <div class="price_product">
-                        <div class="buyied">
-                            <p>ຂາຍແລ້ວ <br> 210 ອັນ</p>
-                        </div>
-                        <div class=" price">
-                            <p>14000K</p>
-                        </div>
-                    </div>
+    <section class="product_container2">
+        <ion-row class="ion-text-center">
+            <div class="product_box" (click)="productVendorNext(product_category.productId)" *ngFor="let product_category of objcategory?.data">
+                <div class="img">
+                    <img [src]="load_image(product_category?.images?.containerName,product_category?.images?.image)" />
                 </div>
+                <p>{{product_category.name}}</p>
 
-            </ion-item>
-            <ion-item class="ion-no-margin">
-                <div class="my_colum wapper_box_item">
-
-                    <div class="item1">
-                        <img src="../../assets/productImgs/item-3.jpg" alt="" /> <br>
-                    </div>
-                    <div class="nameProduct line-clamp">
-                        <p class="cate">ເກີນໄນກີ້ແຟຊັ່ນສະລັບທ່ານຊາຍທີ່ມາເເຮງແຊງທາງໂຄ້ງ</p>
-                    </div>
-                    <div class="price_product">
-                        <div class="buyied">
-                            <p>ຂາຍແລ້ວ <br> 210 ອັນ</p>
-                        </div>
-                        <div class=" price">
-                            <p>14000K</p>
-                        </div>
-                    </div>
+                <div class="price_rate">
+                    <p>{{product_category.price}}ກີບ</p>
+                    <span>  ຂາຍແລ້ວ 221ອັນ</span>
                 </div>
-
-            </ion-item>
-
+            </div>
         </ion-row>
-
     </section>
 </ion-content>
 
@@ -249,10 +149,14 @@
 <ion-footer>
     <div class="wrapper">
         <div class="footer_left ion-text-center">
-            <div class="shop">
-                <ion-icon name="file-tray-stacked-outline" color="medium"></ion-icon><br>
+
+            <div class="shop" (click)="goTocart()">
+                <ion-badge size="1" color="warning" class="ion-no-margin " *ngIf="countCard">{{countCard}}</ion-badge>
+
+                <ion-icon name="cart-sharp" color="primary"></ion-icon><br>
+
                 <ion-label>
-                    ຫນ້າຮ້ານຄ້າ
+                    ກະຕ່າສິນຄ້າ
                 </ion-label>
             </div>
             <div class="heart_like">
@@ -268,9 +172,14 @@
                 </ion-label>
             </div>
         </div>
+        <!-- <div class="footer_right2 ion-text-center">
+            <div class="buy1 ion-text-center">
+                <ion-label (click)="addtoCard()">ເພີ່ມໃສ່ກະຕ່າ</ion-label>
+            </div>
+        </div> -->
         <div class="footer_right ion-text-center">
             <div class="buy1 ion-text-center">
-                <ion-label>ກົດສັ່ງຊື່</ion-label>
+                <ion-label (click)="addtoCard()">ເພີ່ມໃສ່ກະຕ່າ</ion-label>
             </div>
         </div>
     </div>

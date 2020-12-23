@@ -1,0 +1,58 @@
+.logo {
+    --background: #f4f5f8;
+    margin-top: 10px;
+    margin-left: 20px;
+    img {
+        width: 50px;
+    }
+}
+
+ion-header {
+    --background: #f4f5f8;
+}
+
+ion-content {
+    --background: #f4f5f8;
+}
+
+ion-header {
+    ion-toolbar {
+        ion-buttons {
+            ion-back-button {
+                font-family: boonhom;
+                margin-right: 10px;
+            }
+        }
+        ion-title {
+            font-family: boonhom;
+        }
+    }
+}
+
+ion-list {
+    ion-item {
+        .vendornameID {
+            font-family: boonhom;
+            color: #92949c;
+            h4 {
+                font-size: 16px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+        ion-button {
+            font-family: boonhom;
+        }
+        ion-label {
+            font-family: boonhom;
+            color: #383a3e;
+        }
+        ion-icon {
+            color: #92949c;
+        }
+    }
+    .margin {
+        margin-top: 220px;
+    }
+}

@@ -1,0 +1,81 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-back-button text="ກັບຄືນ"></ion-back-button>
+        </ion-buttons>
+        <div _ngcontent-gor-c7="" class="logo" slot="start">
+            <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
+        </div>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+
+        <ion-item>
+
+            <ion-thumbnail slot="start">
+                <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTM2OTI2NTY2Mjg5NTE2MTI5/justin_bieber_2015_photo_courtesy_dfree_shutterstock_348418241_croppedjpg.jpg" alt="" />
+
+            </ion-thumbnail>
+            <div class="vendornameID">
+                <h4>ແກ້ໄຂຂໍມູນທົ່ວໄປ</h4>
+                <p>ຊື່ຜູ້ໃຊ້:ວິລະກອນ</p>
+            </div>
+
+            <ion-button slot="end" class="btn_register" shape="round" color="danger" fill="outline" (click)="nextEditprofile()">ແກ້ໄຂ</ion-button>
+
+
+        </ion-item>
+        <hr>
+        <ion-item lines="none" (click)="nextTolocation()">
+            <ion-label>ທີ່ຢູ່ຂອງຂ້ອຍ</ion-label>
+            <ion-icon name="chevron-forward-sharp" slot="end"></ion-icon>
+
+        </ion-item>
+
+
+
+
+
+    </ion-list>
+    <ion-list style=" margin-top:15px; background-color: #f4f5f8;">
+        <ion-item lines="none" class="margin" style=" margin-top:15px;">
+            <ion-label>ບັນຊີຂອງຂ້ອຍ</ion-label>
+            <ion-icon name="chevron-forward-sharp" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item lines="none" style=" margin-top:15px;">
+            <ion-label>ການຈ່າຍເງິນອອນໄລ</ion-label>
+            <ion-icon name="chevron-forward-sharp" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item lines="none" style=" margin-top:15px;">
+            <ion-label>ທີ່ຢູ່/ປະເທດ</ion-label>
+            <ion-icon name="chevron-forward-sharp" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label>ພາສາ</ion-label>
+            <ion-icon name="chevron-forward-sharp" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label>ການແຈ້ງເຕືອນ</ion-label>
+            <ion-icon name="chevron-forward-sharp" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item lines="none" style=" margin-top:15px;">
+            <ion-label>ແຈ້ງບັນຫາ</ion-label>
+            <ion-icon name="chevron-forward-sharp" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label>ວິທີໃຊ້ງານ</ion-label>
+            <ion-icon name="chevron-forward-sharp" slot="end"></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-list class="ion-padding" (click)="onLogout()">
+        <ion-item class="ion-text-center" lines="none">
+            <ion-label>ອອກຈາກລະບົບ</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-footer>

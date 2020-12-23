@@ -1,0 +1,31 @@
+// ion-footer {
+//     margin-top: 200px;
+// }
+ion-content {
+    --background: rgba(0, 0, 0, 0) !important;
+}
+
+ion-header {
+    --background: #f4f5f8;
+}
+
+ion-footer {
+    background: white;
+    ion-button {
+        font-family: boonhom;
+        color: #ffff;
+    }
+    padding: 20px;
+    section {
+        width: 100%;
+        height: 100px;
+        ion-item {
+            border-radius: 3px;
+            margin-top: 10px;
+            ion-label {
+                font-family: boonhom;
+                color: #ffff;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+ion-header {
+    ion-toolbar {
+        ion-buttons {
+            ion-back-button {
+                font-family: boonhom;
+            }
+        }
+        ion-title {
+            font-family: boonhom;
+        }
+    }
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 20px;
+    img {
+        width: 50px;
+    }
+}
+
+ion-content {
+    ion-grid {
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 100%;
+        ion-button {
+            font-family: boonhom;
+            align-items: center;
+            padding: 0px 40px 0px 40px;
+        }
+        ion-row {
+            ion-col {
+                .container {
+                    font-family: boonhom;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

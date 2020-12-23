@@ -1,0 +1,834 @@
+* {
+    font-family: boonhom;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 20px;
+    img {
+        width: 50px;
+    }
+}
+
+ion-content {
+    --ion-background-color: #F4F5F8;
+}
+
+.profile_wrappper {
+    .item1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+        height: 160px;
+        background-color: #ffffff;
+        img {
+            width: 90px;
+            border-radius: 100%;
+        }
+        .profile_vendor {
+            display: block;
+            ion-button {
+                span {
+                    color: #92949c;
+                }
+            }
+        }
+        .active_name {
+            margin: 0;
+            margin-left: -120px;
+            margin-top: 10px;
+            ion-text {
+                font-size: 13px;
+                color: #92949c;
+            }
+        }
+        .vendor_follow {
+            display: inline;
+        }
+    }
+}
+
+// container 3
+.newsproduct {
+    width: 100%;
+    .wrapper {
+        width: 100%;
+        .product_all_product {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            h4 {
+                color: #92949c;
+                font-family: boonhom;
+            }
+            ion-button {
+                margin-top: 12px;
+                ion-label {
+                    font-family: boonhom;
+                    color: #f8a30e;
+                }
+            }
+        }
+        .price_product {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -15px;
+            .price {
+                font-size: 9px;
+                margin-left: 12px;
+                margin-top: 10px;
+            }
+            .buyied {
+                margin-right: 5px;
+                color: #f8a30e;
+            }
+        }
+    }
+}
+
+// top selling 
+.oldner_product {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    .product {
+        width: 120px;
+        height: 160px;
+        margin-left: 9px;
+        .img {
+            width: 100%;
+            height: 100px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .product_info {
+            margin-top: -10px;
+            font-family: boonhom;
+            font-size: 12px;
+            text-align: start;
+            p {
+                display: -webkit-box;
+                max-width: 400px;
+                height: 20px;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 1.625;
+            }
+            .price_buy {
+                margin-top: -10px;
+                display: flex;
+                justify-content: space-between;
+                .price {
+                    margin-top: 10px;
+                    font-family: boonhom;
+                    color: #f8a30e;
+                    font-weight: bold;
+                }
+                .buy {
+                    font-size: x-small;
+                    color: #92949c;
+                }
+            }
+        }
+        display: inline-block;
+        white-space: normal;
+    }
+}
+
+// end top selling
+.product_container_new {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    ion-row {
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        font-family: boonhom;
+        .product_box {
+            width: 100%;
+            height: auto;
+            margin: 4px;
+            margin-top: 10px;
+            text-align: start;
+            .img {
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: 140px;
+                }
+            }
+            p {
+                overflow: hidden;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0;
+                margin-top: 10px;
+                font-size: 12px
+            }
+            .price_rate {
+                display: flex;
+                justify-content: space-between;
+                margin-top: -6px;
+                margin-right: 8px;
+                p {
+                    color: #f8a30e;
+                    font-size: 12px;
+                }
+                span {
+                    margin-top: 12px;
+                    font-size: 9px;
+                    color: #92949c;
+                }
+            }
+        }
+    }
+}
+
+//ipad  pro
+@media screen and (max-width: 1024px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        font-size: 16px;
+        background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 174px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+    .container2 {
+        .wrapper_oldner_shop {
+            .shop_oldner {
+                .oldner_left {
+                    .img {
+                        p {
+                            break-inside: auto;
+                            // font-size: 12px;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+                .oldner_right {
+                    ion-button {
+                        margin-right: 20px;
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container3 {
+        ion-item {
+            .wrapper {
+                .product_all_product {
+                    h4 {
+                        font-size: 16px;
+                    }
+                    ion-button {
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//ipad 
+@media screen and (max-width: 768px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        font-size: 16px;
+        background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 174px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+    .container2 {
+        .wrapper_oldner_shop {
+            .shop_oldner {
+                .oldner_left {
+                    .img {
+                        p {
+                            break-inside: auto;
+                            // font-size: 12px;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+                .oldner_right {
+                    ion-button {
+                        margin-right: 20px;
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container3 {
+        ion-item {
+            .wrapper {
+                .product_all_product {
+                    h4 {
+                        font-size: 16px;
+                    }
+                    ion-button {
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// surface duo
+@media screen and (max-width: 540px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        width: 185px;
+        font-size: 16px;
+        // background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 160px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+    .container2 {
+        .wrapper_oldner_shop {
+            .shop_oldner {
+                .oldner_left {
+                    .img {
+                        p {
+                            break-inside: auto;
+                            // font-size: 12px;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+                .oldner_right {
+                    ion-button {
+                        margin-right: 20px;
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container3 {
+        ion-item {
+            .wrapper {
+                .product_all_product {
+                    h4 {
+                        font-size: 16px;
+                    }
+                    ion-button {
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//phone 6 7 8 plus
+@media screen and (max-width: 414px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        width: 185px;
+        font-size: 16px;
+        // background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 175px;
+        max-height: 235px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 140px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+    .container2 {
+        .wrapper_oldner_shop {
+            .shop_oldner {
+                .oldner_left {
+                    .img {
+                        p {
+                            break-inside: auto;
+                            // font-size: 12px;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+                .oldner_right {
+                    ion-button {
+                        margin-right: 20px;
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container3 {
+        ion-item {
+            .wrapper {
+                .product_all_product {
+                    h4 {
+                        font-size: 16px;
+                    }
+                    ion-button {
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//iphone 6 7 8 10 x 
+@media screen and (max-width: 375px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        width: 185px;
+        font-size: 16px;
+        // background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 160px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+    .container2 {
+        .wrapper_oldner_shop {
+            .shop_oldner {
+                .oldner_left {
+                    .img {
+                        p {
+                            break-inside: auto;
+                            // font-size: 12px;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+                .oldner_right {
+                    ion-button {
+                        margin-right: 20px;
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container3 {
+        ion-item {
+            .wrapper {
+                .product_all_product {
+                    h4 {
+                        font-size: 16px;
+                    }
+                    ion-button {
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//galaxy s5
+@media screen and (max-width: 360px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        width: 185px;
+        font-size: 16px;
+        // background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 160px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+    .container2 {
+        .wrapper_oldner_shop {
+            .shop_oldner {
+                .oldner_left {
+                    .img {
+                        p {
+                            break-inside: auto;
+                            // font-size: 12px;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+                .oldner_right {
+                    ion-button {
+                        margin-right: 20px;
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container3 {
+        ion-item {
+            .wrapper {
+                .product_all_product {
+                    h4 {
+                        font-size: 16px;
+                    }
+                    ion-button {
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+///iphone 5
+@media screen and (max-width: 320px) {
+    .product_box {
+        position: relative;
+        left: 20px;
+        margin: 3px;
+        max-width: 135px;
+        font-size: 16px;
+        background-color: white;
+        height: 165px;
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+    .container2 {
+        .wrapper_oldner_shop {
+            .shop_oldner {
+                .oldner_left {
+                    .img {
+                        p {
+                            break-inside: auto;
+                            // font-size: 12px;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+                .oldner_right {
+                    ion-button {
+                        margin-right: 20px;
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container3 {
+        ion-item {
+            .wrapper {
+                .product_all_product {
+                    h4 {
+                        font-size: 16px;
+                    }
+                    ion-button {
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//gLxy fold
+@media screen and (max-width: 280px) {
+    .product_box {
+        margin: 3px;
+        max-width: 229px;
+        // max-height: 400px;
+        font-size: 16px;
+        // background-color: gray;
+        height: 140px;
+    }
+    .container2 {
+        .wrapper_oldner_shop {
+            .shop_oldner {
+                .oldner_left {
+                    .img {
+                        p {
+                            break-inside: auto;
+                            // font-size: 12px;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+                .oldner_right {
+                    ion-button {
+                        margin-right: 20px;
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container3 {
+        ion-item {
+            .wrapper {
+                .product_all_product {
+                    h4 {
+                        font-size: 18px;
+                    }
+                    ion-button {
+                        ion-label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

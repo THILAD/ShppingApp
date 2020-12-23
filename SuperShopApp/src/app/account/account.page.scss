@@ -23,8 +23,19 @@ ion-header {
 }
 
 .container {
+    .buton {
+        ion-button {
+            font-family: boonhom;
+        }
+    }
+    // text-align: center;
+    // .img_logo {
+    //     width: 100px;
+    //     height: 100px;
+    // }
     .img_logo img {
         width: 100px;
+        border-radius: 100%;
     }
     .name_app {
         display: flex;
@@ -44,12 +55,6 @@ ion-header {
             margin: auto;
         }
     }
-    .buton {
-        margin-top: 20px;
-        ion-button {
-            font-family: boonhom;
-        }
-    }
 }
 
 // menu_list
@@ -62,12 +67,20 @@ ion-header {
         max-height: 50%;
         padding: 4px;
         ion-card {
+            ion-card-content {
+                ion-badge {
+                    position: relative;
+                    top: -25px;
+                    left: 61px;
+                    font-size: 13px;
+                }
+            }
             ion-label {
                 font-family: boonhom;
             }
             width: 180px;
             ion-icon {
-                font-size: 27px;
+                font-size: 36px;
             }
         }
     }

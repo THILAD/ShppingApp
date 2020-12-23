@@ -1,0 +1,58 @@
+.logo {
+    margin-top: 10px;
+    margin-left: 20px;
+    img {
+        width: 50px;
+    }
+}
+
+ion-header {
+    ion-toolbar {
+        ion-buttons {
+            ion-back-button {
+                font-family: boonhom;
+                margin-right: 10px;
+            }
+        }
+        ion-title {
+            font-family: boonhom;
+        }
+    }
+}
+
+ion-content {
+    ion-grid {
+        ion-row {
+            ion-col {
+                ion-list {
+                    ion-item {
+                        ion-label {
+                            font-family: boonhom;
+                        }
+                        ion-input {
+                            font-family: boonhom;
+                        }
+                        ion-select {
+                            font-family: boonhom;
+                            ion-select-option {
+                                font-family: boonhom;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section {
+        font-family: boonhom;
+        // background-color: blueviolet;
+        margin-top: 20px;
+        .img {
+            img {
+                width: 90px;
+                height: 90px;
+                border-radius: 120px;
+            }
+        }
+    }
+}

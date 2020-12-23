@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-back-button text="ກັບຄືນ" [defaultHref]=""></ion-back-button>
+        </ion-buttons>
+        <div _ngcontent-gor-c7="" class="logo" slot="start">
+            <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <section class="profile_img" class="ion-text-center">
+        <div class="img">
+            <img src="../../assets/productImgs/category_1.png" alt="">
+        </div>
+        <ion-label color="primary" (click)="modalphoto()">ປ່ຽນຮູບໂປຣຟາຍ</ion-label>
+    </section>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-list>
+                    <ion-item>
+                        <ion-label>ຊື່-ນາມສະກຸນ:</ion-label>
+                        <ion-input placeholder="ໃສ່ ຊື່-ນາມສະກຸນ"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>ວັນເດືອນປີເກີດ</ion-label>
+                        <ion-datetime displayFormat="DDDD MMM D, YYYY" min="1980" max="2022" value="2000-09-02"></ion-datetime>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>ແຂວງ</ion-label>
+                        <ion-select cancelText="ຍົກເລີກ" interface="action-sheet" placeholder="ເລືອກເພດ">
+                            <ion-select-option> ເພດຍິງ</ion-select-option>
+                            <ion-select-option>ເພດຊາຍ</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

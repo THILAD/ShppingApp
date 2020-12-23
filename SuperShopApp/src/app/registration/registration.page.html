@@ -1,6 +1,9 @@
 <ion-header class="ion-no-border">
     <ion-toolbar class="header">
-        <div _ngcontent-gor-c7="" class="logo">
+        <ion-buttons slot="end">
+            <ion-back-button text="ກັບຄືນ" [defaultHref]=""></ion-back-button>
+        </ion-buttons>
+        <div _ngcontent-gor-c7="" class="logo" slot="start">
             <span>
       <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png" />
     </span>
@@ -27,32 +30,32 @@
                 <ion-label>
                     <ion-icon name="person-sharp" color="medium"></ion-icon>
                 </ion-label>
-                <ion-input type="text" placeholder="ຊື່ສະມາຊິກ"></ion-input>
+                <ion-input type="text" placeholder="ຊື່ສະມາຊິກ" (keyup)="keyusername($event)"></ion-input>
             </ion-item>
             <ion-item>
                 <ion-label>
                     <ion-icon color="medium" name="call-sharp"></ion-icon>
                 </ion-label>
-                <ion-input type="text" placeholder="ເບີໂທລະສັບ"></ion-input>
+                <ion-input type="text" placeholder="ເບີໂທລະສັບ" (keyup)="keymobilenumber($event)"></ion-input>
             </ion-item>
             <ion-item>
                 <ion-label>
                     <ion-icon name="lock-closed-sharp" color="medium"></ion-icon>
                 </ion-label>
-                <ion-input type="text" placeholder="ລະຫັດຜ່ານ"></ion-input>
+                <ion-input type="text" placeholder="ລະຫັດຜ່ານ" (keyup)="keypassword($event)"></ion-input>
             </ion-item>
 
             <ion-item>
                 <ion-label>
                     <ion-icon name="lock-closed-sharp" color="medium"></ion-icon>
                 </ion-label>
-                <ion-input type="password" placeholder="ຍືນຍັນລະຫັດຜ່ານ"> </ion-input>
+                <ion-input type="password" placeholder="ຍືນຍັນລະຫັດຜ່ານ" (keyup)="keyconfirmpassword($event)"> </ion-input>
 
             </ion-item>
         </ion-list>
 
         <div padding class="btn_submit">
-            <ion-button color="danger" expand="block" (click)="showModalVerification()">ສະມັກສະມາຊິກ</ion-button>
+            <ion-button color="danger" expand="block" (click)="onregister()">ສະມັກສະມາຊິກ</ion-button>
         </div>
     </div>
 

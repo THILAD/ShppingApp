@@ -1,0 +1,91 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <ion-col class="logo_img">
+                    <div _ngcontent-gor-c7="" class="logo">
+                        <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png" />
+                    </div>
+                </ion-col>
+                <ion-col class="search-icon">
+                    <div>
+                        <ion-icon name="search" (click)="show_Serach_Input()"></ion-icon>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <!-- Animated Searchbar -->
+        <ion-searchbar animated placeholder="ຄົ້ນຫາສິນຄ້າ" *ngIf="show_Seacrh"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" pager="true" [options]="slideOpts" autoplay="5000">
+        <ion-slide>
+            <img src="https://laz-img-cdn.alicdn.com/images/ims-web/TB18OEL3Br0gK0jSZFnXXbRRXXa.jpg_1200x1200Q100.jpg_.webp" alt="" />
+        </ion-slide>
+        <ion-slide>
+            <img src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1JpYIo9slXu8jSZFuXXXg7FXa.jpg_1200x1200.jpg" alt="" />
+        </ion-slide>
+        <ion-slide>
+            <img src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1JU7L3Br0gK0jSZFnXXbRRXXa.jpg_1200x1200Q100.jpg_.webp" alt="" />
+        </ion-slide>
+        <ion-slide>
+            <img src="https://laz-img-cdn.alicdn.com/images/ims-web/TB1A_sL3Br0gK0jSZFnXXbRRXXa.jpg_1200x1200Q100.jpg_.webp" alt="" />
+        </ion-slide>
+        <ion-slide>
+            <img src="https://laz-img-cdn.alicdn.com/images/ims-web/TB11oRZo9slXu8jSZFuXXXg7FXa.jpg_1200x1200Q100.jpg_.webp" alt="" />
+        </ion-slide>
+    </ion-slides>
+
+    <ion-grid>
+        <section>
+            <ion-row class="Category">
+                <ion-col size="12" class="Category">
+                    <div>
+                        <p class="cate"><b>ປະເພດ</b></p>
+                    </div>
+                    <div>
+                        <p class="see">ທັງໝົດ</p>
+                    </div>
+                </ion-col>
+                <ion-col size="12" class="Box_list_category">
+                    <div class="product_box1" *ngFor="let category of categories_data?.data;">
+                        <ion-card>
+                            <div class="img_category">
+                                <img [src]="load_image(category.imagePath,category.image)" />
+                            </div>
+                        </ion-card>
+                        <div class="categoryname">
+                            <p>{{category.name}}</p>
+                        </div>
+                    </div>
+
+                </ion-col>
+            </ion-row>
+        </section>
+        <div class="Itemm">
+            <p class="cate"><b>ສິນຄ້ານິຍົມ</b></p>
+        </div>
+    </ion-grid>
+
+    <section class="product_container2">
+        <ion-row class="ion-text-center">
+            <div class="product_box" (click)="productIdnextpage(product.productId)" *ngFor="let product of product_data?.data">
+                <div class="img">
+                    <img [src]="load_image(product?.images?.containerName,product?.images?.image)" />
+                    <br>
+
+                </div>
+                <p>{{product.name}}</p>
+
+                <div class="price_rate">
+                    <p>{{product.price}} ກີບ</p>
+                    <span>  ຂາຍແລ້ວ 221ອັນ</span>
+                </div>
+            </div>
+
+        </ion-row>
+    </section>
+</ion-content>

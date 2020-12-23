@@ -1,0 +1,473 @@
+// ion-content {
+//     --background: var(--ion-color-light);
+//   }
+.logo_img {
+    .logo {
+        margin-top: 10px;
+        margin-left: 20px;
+        img {
+            width: 50px;
+        }
+    }
+}
+
+ion-searchbar {
+    font-family: boonhom;
+}
+
+.search-icon {
+    div {
+        text-align: right;
+        font-family: boonhom;
+        margin-right: 10px;
+        margin-top: 15px;
+        color: #a5a5a5;
+        ion-icon {
+            font-size: 21px;
+        }
+    }
+}
+
+.Category {
+    display: flex;
+    justify-content: space-between;
+    .cate {
+        margin-left: 10px;
+        b {
+            color: #f8a30e;
+            font-family: boonhom;
+        }
+    }
+    .see {
+        margin-right: 10px;
+        color: #6a6c74;
+        font-family: boonhom;
+    }
+}
+
+.Box_list_category {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    .product_box1 {
+        text-align: center;
+        ion-card {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+        display: inline-block;
+        white-space: normal;
+        .img_category {
+            ion-img {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+//item product
+.Itemm {
+    p {
+        color: #f8a30e;
+        font-family: boonhom;
+    }
+}
+
+.product-myitem {
+    align-items: center;
+    font-family: boonhom;
+}
+
+.myitem {
+    align-items: center;
+    margin-left: 14px;
+    img {
+        width: 100%;
+        height: 130px;
+    }
+    .Category_item {
+        p {
+            font-family: boonhom;
+            color: #f8a30e;
+        }
+    }
+}
+
+.product_container2 {
+    width: 100%;
+    ion-row {
+        margin: auto;
+        text-align: start;
+        width: 100%;
+        height: auto;
+        font-family: boonhom;
+        .product_box {
+            width: 100%;
+            height: auto;
+            margin: 4px;
+            margin-top: 10px;
+            text-align: start;
+            .img {
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: 140px;
+                }
+            }
+            p {
+                overflow: hidden;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0;
+                margin-top: 10px;
+                font-size: 12px
+            }
+            .price_rate {
+                display: flex;
+                justify-content: space-between;
+                margin-top: -6px;
+                p {
+                    color: #f8a30e;
+                    font-size: 12px;
+                }
+                span {
+                    margin-top: 12px;
+                    font-size: 9px;
+                    color: #92949c;
+                }
+            }
+        }
+    }
+}
+
+//ipad  pro
+@media screen and (max-width: 1024px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        font-size: 16px;
+        background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 184px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+}
+
+//ipad 
+@media screen and (max-width: 768px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        font-size: 16px;
+        background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 174px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+}
+
+// surface duo
+@media screen and (max-width: 540px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        width: 185px;
+        font-size: 16px;
+        // background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 160px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+}
+
+//phone 6 7 8 plus
+@media screen and (max-width: 414px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        width: 185px;
+        font-size: 16px;
+        // background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 175px;
+        max-height: 235px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 140px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+}
+
+//iphone 6 7 8 10 x 
+@media screen and (max-width: 375px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        width: 185px;
+        font-size: 16px;
+        // background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 160px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+}
+
+//galaxy s5
+@media screen and (max-width: 360px) {
+    .product_box {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        margin: 3px;
+        width: 185px;
+        font-size: 16px;
+        // background-color: rebeccapurple;
+        // border: red solid 2px;
+        background-color: #ffff;
+        max-width: 160px;
+        max-height: 215px;
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 170px;
+            }
+        }
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+}
+
+///iphone 5
+@media screen and (max-width: 320px) {
+    .product_box {
+        position: relative;
+        left: 20px;
+        margin: 3px;
+        max-width: 135px;
+        font-size: 16px;
+        background-color: white;
+        height: 165px;
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 3;
+            padding: 0px 3px;
+            margin-top: -10px;
+            font-size: 12px
+        }
+        .price_rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+            p {
+                color: #f8a30e;
+                font-size: 12px;
+            }
+            span {
+                margin-top: 12px;
+                font-size: 9px;
+                color: #92949c;
+            }
+        }
+    }
+}
+
+//gLxy fold
+@media screen and (max-width: 280px) {
+    .product_box {
+        margin: 3px;
+        max-width: 229px;
+        // max-height: 400px;
+        font-size: 16px;
+        // background-color: gray;
+        height: 140px;
+    }
+}

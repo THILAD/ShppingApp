@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-back-button text="ກັບຄືນ" [defaultHref]="" (click)="confrimSave()"></ion-back-button>
+        </ion-buttons>
+        <div _ngcontent-gor-c7="" class="logo" slot="start">
+            <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label slot="start">ຊື່-ນາມສະກຸນ</ion-label>
+            <ion-input placeholder="ໃສ່ ຊື່-ນາມສະກຸນ" slot="end"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label slot="start">ເລກໂທລະສັບ</ion-label>
+            <ion-input placeholder="ໃສ່ ເບີໂທລະສັບ" slot="end"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>ແຂວງ</ion-label>
+            <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="ເລືອກແຂວງ">
+                <ion-select-option value="red" *ngFor="let province of provincesArray" value="{{province }}">{{province }}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>ເມືອງ</ion-label>
+            <ion-select [interfaceOptions]="customDistrictOptions" interface="action-sheet" placeholder="ເລືອກແຂວງ">
+                <ion-select-option value="red" *ngFor="let province of provincesArray" value="{{province }}">{{province }}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label slot="start">ລະຫັດໄປຊະນີ</ion-label>
+            <ion-input placeholder="ເລກທີ່ໄປຊະນີ" slot="end"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-col>
+                <ion-label>ລາຍລະອຽດທີ່ຢູ່</ion-label>
+                <ion-text>ຊື່ບ້ານ,ຖະໜົນ,ຊື່ຕຶກອາຄານ,ຫ້ອງເລກທີ່...</ion-text><br>
+                <ion-textarea placeholder="ໃສ່ລາຍລະອຽດທີ່ຢູ່"></ion-textarea>
+            </ion-col>
+        </ion-item>
+    </ion-list>
+    <ion-list class="nowlocation">
+        <ion-item lines="none" (click)="nextTomap()">
+            <ion-icon name="location-sharp" color="primary"></ion-icon>
+            <div class="mylocat">
+                <p>ເພີ່ມຄວາມຖືກຕ້ອງທີ່ຢູ່</p>
+                <span>ແຂວງສະຫວັນນະເຂດ 10110 ປະເທດລາວ </span>
+            </div>
+            <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-button expand="block" color="danger">ບັນທຶກ</ion-button>
+</ion-footer>
